@@ -1,13 +1,13 @@
 # vue-mg-modal-dialog
 
 
-![npm](https://img.shields.io/npm/v/vue-mg-modal-gialog)
-![npm](https://img.shields.io/npm/dm/vue-mg-modal-gialog)
+![npm](https://img.shields.io/npm/v/vue-mg-modal-dialog)
+![npm](https://img.shields.io/npm/dm/vue-mg-modal-dialog)
 
 ## Installation
 
 ```
-npm i vue-mg-modal-gialog
+npm i vue-mg-modal-dialog
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm i vue-mg-modal-gialog
 app.js
 
 ```javascript
-import ModalDialog from 'vue-mg-modal-gialog'
+import ModalDialog from 'vue-mg-modal-dialog'
 Vue.component('ModalDialog', ModalDialog)
 ```
 
@@ -24,17 +24,17 @@ Example:
 ```html
 <template>
   <section class="container">
-    <button class="btn btn-primary" @click="show=true">ƒ‚[ƒ_ƒ‹•\¦</button>
+    <button class="btn btn-primary" @click="show=true">ãƒ¢ãƒ¼ãƒ€ãƒ«è¡¨ç¤º</button>
     <modal-dialog :show="show" @close="show=false">
         <template v-slot:header>
-          <div>ƒ_ƒCƒAƒƒO</div>
+          <div>ãƒ€ã‚¤ã‚¢ãƒ­ã‚°</div>
         </template>
         <template v-slot:body>
-          <div>“à—e</div>
+          <div>å†…å®¹</div>
         </template>
         <template v-slot:footer>
-          <button class="btn btn-primary" @click="onStore">‚n‚j</button>
-          <button class="btn btn-secondary" @click="show=false">ƒLƒƒƒ“ƒZƒ‹</button>
+          <button class="btn btn-primary" @click="onStore">ï¼¯ï¼«</button>
+          <button class="btn btn-secondary" @click="show=false">ã‚­ãƒ£ãƒ³ã‚»ãƒ«</button>
         </template>
     </modal-dialog>
   </section>
@@ -53,7 +53,7 @@ export default {
   },
     methods: {
       onStore: function () {
-        alert('OK‚ª‰Ÿ‚³‚ê‚Ü‚µ‚½B')
+        alert('ï¼¯ï¼«ãŒæŠ¼ä¸‹ã•ã‚Œã¾ã—ãŸã€‚')
       }
     },
   components: {
