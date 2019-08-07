@@ -8,7 +8,7 @@
                 <div class="modal-content">
                     <slot name="body"/>
                 </div>
-                <footer class="modal-footer">
+                <footer class="modal-footer" v-if="!hideFooter">
                     <slot name="footer">
                         <button class="btn btn-primary" @click="$emit('submit')">ＯＫ</button>
                         <button class="btn btn-secondary" @click="$emit('close')">キャンセル</button>
@@ -25,6 +25,7 @@ export default {
         show: false,
         size: '',
         hideHeader: '',
+        hideFooter: '',
     },
     data () {
         return {
