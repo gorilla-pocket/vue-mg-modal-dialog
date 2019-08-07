@@ -1,6 +1,6 @@
 <template>
     <transition name="modal" appear>
-        <div class="modal modal-overlay" v-if="show" @click="$emit('close')">
+        <div class="modal modal-overlay" v-if="show" @click.self="$emit('close')">
             <div class="modal-window" :style="style">
                 <div class="modal-header bg-primary text-white" v-if="!hideHeader">
                     <slot name="header"/>
