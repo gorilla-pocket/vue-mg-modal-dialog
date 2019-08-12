@@ -1,6 +1,5 @@
 # vue-mg-modal-dialog
 
-
 ![npm](https://img.shields.io/npm/v/vue-mg-modal-dialog)
 ![npm](https://img.shields.io/npm/dm/vue-mg-modal-dialog)
 
