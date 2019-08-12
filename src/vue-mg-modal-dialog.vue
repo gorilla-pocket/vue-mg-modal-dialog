@@ -22,10 +22,21 @@
 <script>
 export default {
     props: {
-        show: false,
-        size: '',
-        hideHeader: '',
-        hideFooter: '',
+        show: {
+            defalut: false
+        },
+        size: {
+            default: ''
+        },
+        hideHeader: {
+            default: false
+        },
+        hideFooter: {
+            default: false
+        },
+        width: {
+            defalut: '600px'
+        }
     },
     data () {
         return {
@@ -34,8 +45,16 @@ export default {
     },
     computed: {
         style: function () {
+            let width = '600px'
+            if (this.size == 'custom') {
+                width = this.width
+            } else if (this.size == 'sm') {
+                width = '400px'
+            } else if (this.size == 'lg') {
+                width = '800px'
+            }
             return {
-                width: this.size == 'sm' ? '500px' : '600px',
+                width: width,
             }
         },
     },
