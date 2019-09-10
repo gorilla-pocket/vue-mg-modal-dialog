@@ -29,9 +29,11 @@ export default {
             default: ''
         },
         hideHeader: {
+            type: Boolean,
             default: false
         },
         hideFooter: {
+            type: Boolean,
             default: false
         },
         width: {

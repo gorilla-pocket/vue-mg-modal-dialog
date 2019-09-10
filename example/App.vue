@@ -15,7 +15,7 @@
     </modal-dialog>
 
     <button class="btn btn-primary" @click="show2=true">モーダル表示(フッターなし）</button>
-    <modal-dialog :show="show2" hideFooter="true" @close="show2=false">
+    <modal-dialog :show="show2" hide-footer @close="show2=false">
         <template v-slot:header>
           <div>ダイアログ</div>
         </template>
