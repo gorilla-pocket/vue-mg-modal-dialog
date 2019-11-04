@@ -1,6 +1,6 @@
 <template>
     <transition name="modal" appear>
-        <div class="modal modal-overlay" v-if="show" @click.self="$emit('close')">
+        <div class="modal modal-overlay" :class="{ 'modal-overlay-start': started }" v-if="show" @click.self="$emit('close')">
             <div class="modal-window" :style="style">
                 <div class="modal-header bg-primary text-white" v-if="!hideHeader">
                     <slot name="header"/>
@@ -38,7 +38,11 @@ export default {
         },
         width: {
             defalut: '600px'
-        }
+        },
+        started: {
+            type: Boolean,
+            default: false
+        },
     },
     data () {
         return {
@@ -79,6 +83,20 @@ export default {
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
+    }
+
+    &.modal-overlay-start {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        position: fixed;
+        z-index: 30;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        padding-top: 30px;
     }
 
     &-window {

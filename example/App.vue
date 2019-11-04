@@ -54,6 +54,20 @@
           <button class="btn btn-secondary" @click="show4=false">キャンセル</button>
         </template>
     </modal-dialog>
+
+    <button class="btn btn-primary" @click="show5=true">モーダル表示（トップ）</button>
+    <modal-dialog :show="show5" @close="show4=false" size="custom" width="900px" started>
+        <template v-slot:header>
+          <div>ダイアログ</div>
+        </template>
+        <template v-slot:body>
+          <div>内容</div>
+        </template>
+        <template v-slot:footer>
+          <button class="btn btn-primary" @click="onStore">ＯＫ</button>
+          <button class="btn btn-secondary" @click="show5=false">キャンセル</button>
+        </template>
+    </modal-dialog>
   </section>
 </template>
 
@@ -71,6 +85,7 @@ export default {
       show2: false,
       show3: false,
       show4: false,
+      show5: false,
     }
   },
     methods: {
