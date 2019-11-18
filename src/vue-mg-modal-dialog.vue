@@ -118,6 +118,8 @@ export default {
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
         padding: 10px 20px;
+        max-height: calc(100vh - 210px);
+        overflow-y: auto;
     }
 
     &-footer {
