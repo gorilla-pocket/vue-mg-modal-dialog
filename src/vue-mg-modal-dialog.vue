@@ -5,7 +5,7 @@
                 <div class="modal-header bg-primary text-white" v-if="!hideHeader">
                     <slot name="header"/>
                 </div>
-                <div class="modal-content">
+                <div class="modal-content px-2 px-sm-4">
                     <slot name="body"/>
                 </div>
                 <footer class="modal-footer" v-if="!hideFooter">
