@@ -68,6 +68,16 @@
           <button class="btn btn-secondary" @click="show5=false">キャンセル</button>
         </template>
     </modal-dialog>
+
+    <button class="btn btn-primary" @click="show6=true">モーダル表示(ヘッダーフッターなし）</button>
+    <modal-dialog :show="show6" hide-header hide-footer @close="show6=false">
+        <template v-slot:body>
+          <div>内容</div>
+          <select class="form-control">
+            <option>Default select</option>
+          </select>
+        </template>
+    </modal-dialog>
   </section>
 </template>
 
@@ -86,6 +96,7 @@ export default {
       show3: false,
       show4: false,
       show5: false,
+      show6: false,
     }
   },
     methods: {

@@ -5,7 +5,7 @@
                 <div class="modal-header bg-primary text-white" v-if="!hideHeader">
                     <slot name="header"/>
                 </div>
-                <div class="modal-content px-2 px-sm-4">
+                <div class="modal-content px-2 px-sm-4" :class="classObject">
                     <slot name="body"/>
                 </div>
                 <footer class="modal-footer" v-if="!hideFooter">
@@ -63,6 +63,14 @@ export default {
                 width: width,
             }
         },
+        classObject: function () {
+            return {
+                'modal-content-height': !this.hideHeader && !this.hideFooter,
+                'modal-content-height-no-header': !this.hideHeader && this.hideFooter,
+                'modal-content-height-no-footer': this.hideHeader && !this.hideFooter,
+                'modal-content-height-no-header-footer': this.hideHeader && this.hideFooter,
+            }
+        }
     },
     methods: {
 
@@ -118,8 +126,19 @@ export default {
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
         padding: 10px 20px;
-        max-height: calc(100vh - 210px);
         overflow-y: auto;
+    }
+    &-content-height {
+        max-height: calc(100vh - 210px);
+    }
+    &-content-height-no-header {
+        max-height: calc(100vh - 105px);
+    }
+    &-content-height-no-footer {
+        max-height: calc(100vh - 105px);
+    }
+    &-content-height-no-header-footer {
+        max-height: calc(100vh - 50px);
     }
 
     &-footer {
